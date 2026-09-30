@@ -25,3 +25,10 @@ def get_item(items, x):
     print(items[x])
 
 # Problem 5
+def sum_honey(hunny_jars):
+    sum = 0
+    for hunny in hunny_jars:
+        sum += hunny
+    return sum
+
+# Problem 6 
