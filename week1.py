@@ -47,3 +47,10 @@ def count_less_than(race_times, threshold):
             count += 1
     return count
 
+#  Problem 8
+def print_todo_list(tasks):
+    print('Pooh To Dos:')
+    for i in range(len(tasks)):
+        print(f'{i + 1}. {tasks[i]}')
+
+# Problem 9
