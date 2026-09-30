@@ -19,6 +19,7 @@ print(lineup(artists2, set_times2))
 
 
 
+# Session 2
 
 # Problem Set Version 2
 
@@ -52,3 +53,29 @@ print(navigate_research_station(station_layout2, observations2))
 
 
 
+# Problem 4
+
+'''
+In your work with a wildlife conservation database, you have two lists: observed_species and priority_species. The elements of priority_species are distinct, and all elements in priority_species are also in observed_species.
+Write a function prioritize_observations() that sorts the elements of observed_species such that the relative ordering of items in observed_species matches that of priority_species. Species that do not appear in priority_species should be placed at the end of observed_species in ascending order.
+
+Inputs: Two lists, where 2 contains elements from 1
+Outputs: Sorted list with elements from 2 at the beginning from the 1 and rest at the end of the list
+Edge: 
+- Empty lists
+- Duplicates
+Plan:
+- Loop through 2 array
+- Loop inside loop
+- Check if the elements in 2 are in 1 array
+- If yes to swap with their index
+'''
+
+observed_species1 = ["🐯", "🦁", "🦌", "🦁", "🐯", "🐘", "🐍", "🦑", "🐻", "🐯", "🐼"]
+priority_species1 = ["🐯", "🦌", "🐘", "🦁"]  
+
+observed_species2 = ["bluejay", "sparrow", "cardinal", "robin", "crow"]
+priority_species2 = ["cardinal", "sparrow", "bluejay"]
+
+def prioritize_observations(observed_species, priority_species):
+    
