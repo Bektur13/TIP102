@@ -32,3 +32,18 @@ def sum_honey(hunny_jars):
     return sum
 
 # Problem 6 
+def doubled(hunny_jars):
+    doubled_list = []
+    for i in range(len(hunny_jars)):
+        doubled_list.append(hunny_jars[i] * 2)
+    return doubled_list
+print(doubled([1, 2, 3]))
+
+#  Problem 7
+def count_less_than(race_times, threshold):
+    count = 0
+    for race in race_times:
+        if(race < threshold):
+            count += 1
+    return count
+
