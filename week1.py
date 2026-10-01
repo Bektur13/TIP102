@@ -68,3 +68,19 @@ def split_haycorns(quantity):
             result.append(i)
 
     return result
+
+
+# Problem 11
+def tiggerfy(s):
+    chars_to_remove = "tigerTIGER"
+    table = str.maketrans("", "", chars_to_remove)
+    cleaned = s.translate(table)
+    return cleaned
+
+# Problem 12
+def locate_thistles(list):
+    result = []
+    for i in range(len(list)):
+        if(list[i] == "thistle"):
+            result.append(i)
+    return result
