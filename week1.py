@@ -37,7 +37,6 @@ def doubled(hunny_jars):
     for i in range(len(hunny_jars)):
         doubled_list.append(hunny_jars[i] * 2)
     return doubled_list
-print(doubled([1, 2, 3]))
 
 #  Problem 7
 def count_less_than(race_times, threshold):
@@ -54,3 +53,18 @@ def print_todo_list(tasks):
         print(f'{i + 1}. {tasks[i]}')
 
 # Problem 9
+def can_pair(list):
+    sum = 0
+    for i in range(len(list)):
+        sum += list[i]
+    return sum % 2 == 0
+
+# Problem 10
+def split_haycorns(quantity):
+    result = []
+    for i in range(1, quantity + 1):
+        divider = quantity / i
+        if divider.is_integer():
+            result.append(i)
+
+    return result
