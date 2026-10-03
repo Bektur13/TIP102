@@ -1,3 +1,4 @@
+# Session 1
 # Problem Set 1
 # Problem 1
 def welcome():
@@ -84,3 +85,14 @@ def locate_thistles(list):
         if(list[i] == "thistle"):
             result.append(i)
     return result
+
+
+# Session 2
+# Problem 1
+def reverse_function(sentence):
+    list = sentence.split(" ")
+    list.reverse()
+    return " ".join(list)
+
+# Problem 2
+d
