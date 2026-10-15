@@ -20,19 +20,23 @@ class Villager:
         validValues = ["acoustic guitar", "ironwood kitchenette", "rattan armchair", "kotatsu", "cacao tree"]
         if item_name in validValues:
             self.furniture.append(item_name)
+
+    def print_inventory(self):
+        if len(self.furniture) <= 0:
+            print("Inventory empty")
+        else: 
+            print(", ".join(f"{item}: {self.furniture.count(item)}" for item in set(self.furniture)))
+
+
     
         
 alice = Villager("Alice", "Koala", "guvnor")
-print(alice.furniture)
 
-alice.add_item("acoustic guitar")
-print(alice.furniture)
+alice.print_inventory()
 
-alice.add_item("cacao tree")
-print(alice.furniture)
+alice.furniture = ["acoustic guitar", "ironwood kitchenette", "kotatsu", "kotatsu"]
+alice.print_inventory()
 
-alice.add_item("nintendo switch")
-print(alice.furniture)
 
 
 # appolo = Vintager("Apollo", "Eagle", "pah")
