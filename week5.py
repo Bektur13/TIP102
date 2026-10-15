@@ -1,5 +1,5 @@
 # Session 1 Problem Set 1
-class Vintager:
+class Villager:
     def __init__(self, name, species, catchphrase):
         self.name = name
         self.species = species
@@ -7,12 +7,39 @@ class Vintager:
         self.furniture = []
 
     def greet_player(self, player_name):
-        return f"{self.name}: Hey there, {player_name}! How is it going?"
+        return f"{self.name}: Hey there, {player_name}! How is it going, {self.catchphrase}"
 
-appolo = Vintager("Apollo", "Eagle", "pah")
+    def set_cacthphrase(self, new_catchphrase):
+        if len(new_catchphrase) <= 20 and new_catchphrase.replace(" ", "").isalpha():
+            self.catchphrase = new_catchphrase
+            print("Catchphrase updated")
+        else: 
+            print("Invalid catchphrase")
 
-bones = Vintager("Bones", "Dog", "yip yip")
-print(bones.greet_player("Bektur"))
+    def add_item(self, item_name):
+        validValues = ["acoustic guitar", "ironwood kitchenette", "rattan armchair", "kotatsu", "cacao tree"]
+        if item_name in validValues:
+            self.furniture.append(item_name)
+    
+        
+alice = Villager("Alice", "Koala", "guvnor")
+print(alice.furniture)
+
+alice.add_item("acoustic guitar")
+print(alice.furniture)
+
+alice.add_item("cacao tree")
+print(alice.furniture)
+
+alice.add_item("nintendo switch")
+print(alice.furniture)
+
+
+# appolo = Vintager("Apollo", "Eagle", "pah")
+
+# bones = Vintager("Bones", "Dog", "yip yip")
+# bones.catchphrase = "ruff it up"
+
 
         
 
